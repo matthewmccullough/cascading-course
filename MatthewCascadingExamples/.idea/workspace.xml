@@ -62,7 +62,7 @@
       <file leaf-file-name="SimplestPipe1Flip.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/SimplestPipe1Flip.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="39" column="0" selection-start="1469" selection-end="1469" vertical-scroll-proportion="0.8060606">
+            <state line="16" column="17" selection-start="431" selection-end="431" vertical-scroll-proportion="0.33939394">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -73,7 +73,7 @@
       <file leaf-file-name="SimplestPipe2Sort.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/SimplestPipe2Sort.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="0" selection-start="613" selection-end="613" vertical-scroll-proportion="0.0">
+            <state line="18" column="44" selection-start="499" selection-end="499" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -82,7 +82,7 @@
       <file leaf-file-name="SimplestPipe3CoGroup.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/SimplestPipe3CoGroup.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="23" selection-start="1528" selection-end="1528" vertical-scroll-proportion="0.0">
+            <state line="25" column="44" selection-start="803" selection-end="803" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -616,21 +616,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/SimplestPipe3CoGroup.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="23" selection-start="1528" selection-end="1528" vertical-scroll-proportion="0.0">
+        <state line="25" column="44" selection-start="803" selection-end="803" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/SimplestPipe2Sort.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="0" selection-start="613" selection-end="613" vertical-scroll-proportion="0.0">
+        <state line="18" column="44" selection-start="499" selection-end="499" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/SimplestPipe1Flip.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="0" selection-start="1469" selection-end="1469" vertical-scroll-proportion="0.8060606">
+        <state line="16" column="17" selection-start="431" selection-end="431" vertical-scroll-proportion="0.33939394">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

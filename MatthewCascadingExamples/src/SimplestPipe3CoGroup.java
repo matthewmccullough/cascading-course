@@ -24,7 +24,6 @@ import java.util.Properties;
  */
 public class SimplestPipe3CoGroup {
     public static void main(String[] args) {
-
         String inputPathDefinitions = "data/babynamedefinitions.csv";
         String inputPathCounts = "data/babynamecounts.csv";
         String outputPath = "output/simplestpipe3";
@@ -63,6 +62,4 @@ public class SimplestPipe3CoGroup {
         Flow flow = flowConnector.connect( sources, sink, sortedpipe );
         flow.complete();
     }
-
-
 }

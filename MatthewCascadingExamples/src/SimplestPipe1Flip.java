@@ -18,7 +18,6 @@ import java.util.Properties;
  */
 public class SimplestPipe1Flip {
     public static void main(String[] args) {
-
         String inputPath = "data/babynamedefinitions.csv";
         String outputPath = "output/simplestpipe1";
 
@@ -39,5 +38,4 @@ public class SimplestPipe1Flip {
         Flow flow = flowConnector.connect( "flipflow", source, sink, assembly );
         flow.complete();
     }
-
 }
