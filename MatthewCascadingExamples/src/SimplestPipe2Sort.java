@@ -1,3 +1,4 @@
+import cascading.CascadingException;
 import cascading.flow.Flow;
 import cascading.flow.FlowConnector;
 import cascading.pipe.GroupBy;
@@ -29,7 +30,8 @@ public class SimplestPipe2Sort {
 
         Pipe assembly = new Pipe( "sortreverse" );
         Fields groupFields = new Fields( "name");
-        groupFields.setComparator("name", Collections.reverseOrder());
+        //OPTIONAL: Set the comparator
+        //groupFields.setComparator("name", Collections.reverseOrder());
 
         assembly = new GroupBy( assembly, groupFields );
 
@@ -40,5 +42,8 @@ public class SimplestPipe2Sort {
         FlowConnector flowConnector = new FlowConnector( properties );
         Flow flow = flowConnector.connect( "sortflow", source, sink, assembly );
         flow.complete();
+
+        //OPTIONAL: Output a debugging diagram
+        //flow.writeDOT(outputPath + "/flowdiagram.dot");
     }
 }

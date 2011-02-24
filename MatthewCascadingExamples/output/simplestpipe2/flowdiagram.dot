@@ -1,0 +1,11 @@
+digraph G {
+  1 [label = "GroupBy('sortreverse')[by:['name']]"];
+  2 [label = "Hfs['TextDelimited[['definition', 'name']]']['output/simplestpipe2']']"];
+  3 [label = "Hfs['TextDelimited[['name', 'definition']]']['data/babynamedefinitions.csv']']"];
+  4 [label = "[head]"];
+  5 [label = "[tail]"];
+  1 -> 2 [label = "sortreverse[{1}:'name']\n[{2}:'name', 'definition']"];
+  4 -> 3 [label = ""];
+  2 -> 5 [label = "[{2}:'definition', 'name']\n[{2}:'definition', 'name']"];
+  3 -> 1 [label = "[{2}:'name', 'definition']\n[{2}:'name', 'definition']"];
+}

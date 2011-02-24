@@ -28,12 +28,14 @@ public class SimplestPipe1Flip {
         Tap sink = new Hfs( sinkScheme, outputPath, SinkMode.REPLACE );
 
         Pipe assembly = new Pipe( "flip" );
+        //OPTIONAL: Debug the tuple
         //assembly = new Each( assembly, DebugLevel.VERBOSE, new Debug() );
 
         Properties properties = new Properties();
         FlowConnector.setApplicationJarClass(properties, SimplestPipe1Flip.class);
 
         FlowConnector flowConnector = new FlowConnector( properties );
+        //OPTIONAL: Have the planner use or filter out the debugging statements
         //FlowConnector.setDebugLevel( properties, DebugLevel.VERBOSE );
         Flow flow = flowConnector.connect( "flipflow", source, sink, assembly );
         flow.complete();

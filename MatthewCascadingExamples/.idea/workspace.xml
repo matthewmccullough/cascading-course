@@ -59,10 +59,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="SimplestPipe1Flip.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="SimplestPipe1Flip.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/SimplestPipe1Flip.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="17" selection-start="431" selection-end="431" vertical-scroll-proportion="0.33939394">
+            <state line="37" column="79" selection-start="1429" selection-end="1429" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -70,10 +70,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SimplestPipe2Sort.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="SimplestPipe2Sort.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/SimplestPipe2Sort.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="44" selection-start="499" selection-end="499" vertical-scroll-proportion="0.0">
+            <state line="13" column="28" selection-start="405" selection-end="405" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -82,7 +82,7 @@
       <file leaf-file-name="SimplestPipe3CoGroup.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/SimplestPipe3CoGroup.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="44" selection-start="803" selection-end="803" vertical-scroll-proportion="0.0">
+            <state line="34" column="27" selection-start="1248" selection-end="1248" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -103,9 +103,10 @@
         <option value="$PROJECT_DIR$/output/simplestpipe/part-00000" />
         <option value="$PROJECT_DIR$/src/SimplestPipe.java" />
         <option value="$PROJECT_DIR$/output/simplestpipe2/part-00000" />
+        <option value="$PROJECT_DIR$/data/babynamecounts.csv" />
         <option value="$PROJECT_DIR$/src/SimplestPipe3CoGroup.java" />
-        <option value="$PROJECT_DIR$/src/SimplestPipe2Sort.java" />
         <option value="$PROJECT_DIR$/src/SimplestPipe1Flip.java" />
+        <option value="$PROJECT_DIR$/src/SimplestPipe2Sort.java" />
       </list>
     </option>
   </component>
@@ -205,6 +206,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="simplestpipe3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MatthewCascadingExamples" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MatthewCascadingExamples" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="output" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="simplestpipe2" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -600,40 +619,54 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar:///Applications/Dev/cascading/cascading-1.2.1-hadoop-0.19.2+/cascading-core-1.2.1.jar!/cascading/operation/text/FieldFormatter.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="13" selection-start="162" selection-end="162" vertical-scroll-proportion="0.049740933">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Applications/Dev/cascading/cascading-1.2.1-hadoop-0.19.2+/cascading-core-1.2.1.jar!/cascading/flow/Flow.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="219" column="29" selection-start="10967" selection-end="10980" vertical-scroll-proportion="0.5472689">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/data/babynamecounts.csv">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="720" column="7" selection-start="7672" selection-end="7673" vertical-scroll-proportion="0.813278">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/output/simplestpipe3/part-00000">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4268" column="12" selection-start="146034" selection-end="146034" vertical-scroll-proportion="51.733334">
+        <state line="3791" column="12" selection-start="129904" selection-end="129904" vertical-scroll-proportion="27.878788">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/SimplestPipe3CoGroup.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="44" selection-start="803" selection-end="803" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SimplestPipe2Sort.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="44" selection-start="499" selection-end="499" vertical-scroll-proportion="0.0">
+        <state line="34" column="27" selection-start="1248" selection-end="1248" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/SimplestPipe1Flip.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="17" selection-start="431" selection-end="431" vertical-scroll-proportion="0.33939394">
+        <state line="37" column="79" selection-start="1429" selection-end="1429" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SimplestPipe2Sort.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="28" selection-start="405" selection-end="405" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
