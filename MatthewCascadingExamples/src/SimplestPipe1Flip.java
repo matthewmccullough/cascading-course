@@ -1,5 +1,8 @@
 import cascading.flow.Flow;
 import cascading.flow.FlowConnector;
+import cascading.operation.Debug;
+import cascading.operation.DebugLevel;
+import cascading.pipe.Each;
 import cascading.pipe.Pipe;
 import cascading.scheme.Scheme;
 import cascading.scheme.TextDelimited;
@@ -20,7 +23,7 @@ import java.util.Properties;
 public class SimplestPipe1Flip {
     public static void main(String[] args) {
 
-        String inputPath = "data/babynames.csv";
+        String inputPath = "data/babynamedefinitions.csv";
         String outputPath = "output/simplestpipe1";
 
         // define source and sink Taps.
@@ -32,6 +35,7 @@ public class SimplestPipe1Flip {
 
         // the 'head' of the pipe assembly
         Pipe assembly = new Pipe( "flip" );
+        //assembly = new Each( assembly, DebugLevel.VERBOSE, new Debug() );
 
         // initialize app properties, tell Hadoop which jar file to use
         Properties properties = new Properties();
@@ -40,6 +44,7 @@ public class SimplestPipe1Flip {
         // plan a new Flow from the assembly using the source and sink Taps
         // with the above properties
         FlowConnector flowConnector = new FlowConnector( properties );
+        //FlowConnector.setDebugLevel( properties, DebugLevel.VERBOSE );
         Flow flow = flowConnector.connect( "flipflow", source, sink, assembly );
 
         // execute the flow, block until complete

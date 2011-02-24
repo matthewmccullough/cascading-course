@@ -22,7 +22,7 @@ import java.util.Properties;
 public class SimplestPipe2Sort {
     public static void main(String[] args) {
 
-        String inputPath = "data/babynames.csv";
+        String inputPath = "data/babynamedefinitions.csv";
         String outputPath = "output/simplestpipe2";
 
         // define source and sink Taps.

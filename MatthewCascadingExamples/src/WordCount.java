@@ -27,7 +27,7 @@ import java.util.Properties;
 public class WordCount {
     public static void main(String[] args) {
 
-        String inputPath = "data/babynames.csv";
+        String inputPath = "data/babynamedefinitions.csv";
         String outputPath = "output/wordcount";
 
 
