@@ -24,14 +24,14 @@ public class SimplestPipe2Sort {
         Scheme sourceScheme = new TextDelimited( new Fields( "name", "definition" ), "," );
         Tap source = new Hfs( sourceScheme, inputPath );
 
-        Scheme sinkScheme = new TextDelimited( new Fields( "definition", "name" ), " ^^^ " );
+        Scheme sinkScheme = new TextDelimited( new Fields( "definition", "name" ), "++" );
         Tap sink = new Hfs( sinkScheme, outputPath, SinkMode.REPLACE );
 
 
         Pipe assembly = new Pipe( "sortreverse" );
         Fields groupFields = new Fields( "name");
         //OPTIONAL: Set the comparator
-        //groupFields.setComparator("name", Collections.reverseOrder());
+        groupFields.setComparator("name", Collections.reverseOrder());
 
         assembly = new GroupBy( assembly, groupFields );
 
@@ -44,6 +44,6 @@ public class SimplestPipe2Sort {
         flow.complete();
 
         //OPTIONAL: Output a debugging diagram
-        //flow.writeDOT(outputPath + "/flowdiagram.dot");
+        flow.writeDOT(outputPath + "/flowdiagram.dot");
     }
 }

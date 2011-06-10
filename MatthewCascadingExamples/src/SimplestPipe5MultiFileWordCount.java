@@ -10,30 +10,29 @@ import cascading.pipe.GroupBy;
 import cascading.pipe.Pipe;
 import cascading.scheme.Scheme;
 import cascading.scheme.TextLine;
-import cascading.tap.Hfs;
-import cascading.tap.SinkMode;
-import cascading.tap.Tap;
+import cascading.tap.*;
 import cascading.tuple.Fields;
 
 import java.util.Properties;
 
 /**
- * Created by IntelliJ IDEA.
- * User: mccm06
- * Date: 2/23/11
- * Time: 7:04 PM
- * To change this template use File | Settings | File Templates.
+ * Cound the words in a file
  */
-public class WordCount {
+public class SimplestPipe5MultiFileWordCount {
     public static void main(String[] args) {
 
-        String inputPath = "data/babynamedefinitions.csv";
+        String inputPath1 = "data/babynamedefinitions1.csv";
+        String inputPath2 = "data/babynamedefinitions2.csv";
+        String inputPath3 = "data/babynamedefinitions3.csv";
         String outputPath = "output/wordcount";
 
 
         // define source and sink Taps.
         Scheme sourceScheme = new TextLine( new Fields( "line" ) );
-        Tap source = new Hfs( sourceScheme, inputPath );
+        Tap source1 = new Hfs( sourceScheme, inputPath1 );
+        Tap source2 = new Hfs( sourceScheme, inputPath2 );
+        Tap source3 = new Hfs( sourceScheme, inputPath3 );
+        MultiSourceTap source = new MultiSourceTap( source1, source2, source3 );
 
         Scheme sinkScheme = new TextLine( new Fields( "word", "count" ) );
         Tap sink = new Hfs( sinkScheme, outputPath, SinkMode.REPLACE );
@@ -59,7 +58,7 @@ public class WordCount {
 
         // initialize app properties, tell Hadoop which jar file to use
         Properties properties = new Properties();
-        FlowConnector.setApplicationJarClass(properties, WordCount.class);
+        FlowConnector.setApplicationJarClass(properties, SimplestPipe5MultiFileWordCount.class);
 
         // plan a new Flow from the assembly using the source and sink Taps
         // with the above properties

@@ -36,7 +36,7 @@ public class SimplestPipe3CoGroup {
         Tap sourceDefinitions = new Hfs( sourceSchemeDefinitions, inputPathDefinitions );
         Tap sourceCounts = new Hfs( sourceSchemeCounts, inputPathCounts );
 
-        Scheme sinkScheme = new TextDelimited( new Fields( "dname", "count", "definition" ), " ^^^ " );
+        Scheme sinkScheme = new TextDelimited( new Fields( "dname", "count", "definition" ), " +++ " );
         Tap sink = new Hfs( sinkScheme, outputPath, SinkMode.REPLACE );
 
 
@@ -44,10 +44,10 @@ public class SimplestPipe3CoGroup {
         Pipe countpipe = new Pipe( "countpipe" );
 
         //OPTIONAL: Coerce types to primitives. Can be commented out safely
-//        Fields arguments = new Fields( "name", "count" );
-//        Class types[] = new Class[]{String.class, Integer.class};
-//        Identity identity = new Identity( types );
-//        countpipe = new Each( countpipe, arguments, identity, Fields.REPLACE );
+        Fields arguments = new Fields( "name", "count" );
+        Class types[] = new Class[]{String.class, Integer.class};
+        Identity identity = new Identity( types );
+        countpipe = new Each( countpipe, arguments, identity, Fields.REPLACE );
 
         //Join the tuple streams
         Fields commonfields = new Fields( "name" );
@@ -55,9 +55,9 @@ public class SimplestPipe3CoGroup {
         Pipe joinpipe = new CoGroup( definitionspipe, commonfields, countpipe, commonfields, newfields, new InnerJoin() );
 
         //OPTIONAL: Sort
-//        Fields groupFields = new Fields( "count");
-//        groupFields.setComparator("count", Collections.reverseOrder());
-//        joinpipe = new GroupBy( joinpipe, groupFields );
+        Fields groupFields = new Fields( "count");
+        groupFields.setComparator("count", Collections.reverseOrder());
+        joinpipe = new GroupBy( joinpipe, groupFields );
 
 
         Properties properties = new Properties();
@@ -71,6 +71,6 @@ public class SimplestPipe3CoGroup {
         flow.complete();
 
         //OPTIONAL: Flow diagram
-        //flow.writeDOT(outputPath + "/flowdiagram.dot");
+        flow.writeDOT(outputPath + "/flowdiagram.dot");
     }
 }
