@@ -16,7 +16,7 @@ import cascading.tuple.Fields;
 import java.util.Properties;
 
 /**
- * Cound the words in a file
+ * Count the words in a file
  */
 public class SimplestPipe5MultiFileWordCount {
     public static void main(String[] args) {
@@ -68,6 +68,4 @@ public class SimplestPipe5MultiFileWordCount {
         // execute the flow, block until complete
         flow.complete();
     }
-
-
 }
