@@ -44,6 +44,6 @@ public class SimplestPipe2Sort {
         flow.complete();
 
         //OPTIONAL: Output a debugging diagram
-        flow.writeDOT(outputPath + "/flowdiagram.dot");
+        flow.writeDOT(outputPath + "/flowdiagram2.dot");
     }
 }
