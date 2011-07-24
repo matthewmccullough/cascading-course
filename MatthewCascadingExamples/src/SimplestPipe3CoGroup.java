@@ -71,6 +71,6 @@ public class SimplestPipe3CoGroup {
         flow.complete();
 
         //OPTIONAL: Flow diagram
-        flow.writeDOT(outputPath + "/flowdiagram.dot");
+        flow.writeDOT(outputPath + "/flowdiagram3.dot");
     }
 }
