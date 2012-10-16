@@ -24,7 +24,7 @@ public class SimplestPipe1Flip {
         Scheme sourceScheme = new TextDelimited( new Fields( "name", "definition"), "," );
         Tap source = new Hfs( sourceScheme, inputPath );
 
-        Scheme sinkScheme = new TextDelimited( new Fields( "definition", "name" ), " $$ " );
+        Scheme sinkScheme = new TextDelimited( new Fields( "definition", "name" ), " %% " );
         Tap sink = new Hfs( sinkScheme, outputPath, SinkMode.REPLACE );
 
         Pipe assembly = new Pipe( "flip" );
@@ -39,5 +39,6 @@ public class SimplestPipe1Flip {
         FlowConnector.setDebugLevel( properties, DebugLevel.VERBOSE );
         Flow flow = flowConnector.connect( "flipflow", source, sink, assembly );
         flow.complete();
+        flow.writeDOT(outputPath + "/flowdiagram1.dot");
     }
 }

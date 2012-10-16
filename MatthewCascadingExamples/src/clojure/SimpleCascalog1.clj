@@ -1,4 +1,7 @@
 (comment "http://nathanmarz.com/blog/introducing-cascalog-a-clojure-based-query-language-for-hado.html")
+(comment "http://nathanmarz.com/blog/new-cascalog-features-outer-joins-combiners-sorting-and-more.html")
+
+(comment "Set up playground data")
 (use 'cascalog.playground) (bootstrap)
 
 (comment "Print all people from the AGE set")
@@ -9,6 +12,10 @@
 
 (comment "Print all people from the AGE set equal to 25")
 (?<- (stdout) [?person] (age ?person 25))
+
+(comment "Print all people: age, name and gender")
+(?<- (stdout) [?person ?age ?gender]
+          (age ?person ?age) (gender ?person ?gender))
 
 (comment "Print all ages from the AGE set and show which names containing g")
 (defn containsg [str] (.contains str "g")) 
